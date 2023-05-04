@@ -1,0 +1,25 @@
+[package]
+name = "poly_mul"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+panther_inner = { path = "./PantherInner" }
+wrapper_bindings = { path = "./wrapper_bindings" }
+fragile = "2.0.0"
+rug = "1.19.0"
+gmp-mpfr-sys = { version = "1.5.0" , features = ["use-system-libs"] }
+num = "0.4.0"
+log = "0.4.0"
+env_logger = "0.10.0"
+tracing = "*"
+ark-ff = { version= "0.4.0", features = [ "asm", "parallel" ]}
+ark-sponge = "0.3"
+ark-std = "0.4"
+ark-poly = "0.4.0"
+ark-poly-commit = "0.3.0"
+ark-ec = { version= "0.4.0", features =[ "parallel" ] }
+rand_core = {version = "0.6", default-features=false, features = ["getrandom"] }
+rayon = "1.6.1"
